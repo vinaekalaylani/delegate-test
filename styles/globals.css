@@ -1,0 +1,147 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.sidebar {
+  padding: 20px;
+  height: 760px;
+  display: flex;
+	flex-direction: column;
+  box-shadow: -12px -12px 20px rgba(255, 255, 255, 0.2), 10px 10px 24px rgba(166, 180, 200, 0.7);
+  border-radius: 40px;
+}
+
+.btn_sidebar {
+  height: 47px;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  font-size: 11px;
+  padding: 20px;
+  margin-top: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+
+  border-radius: 10px;
+  text-align: center;
+  color: #666666;
+}
+
+.btn_sidebar:hover {
+  background: rgba(125, 183, 180, 0.15);
+}
+
+.sub-link {
+  font-weight: 500;
+  font-size: 8px;
+  line-height: 8px;
+  color: #666666;
+}
+
+.frame {
+  margin: 100px;
+  display: flex;
+	flex-direction: row;
+}
+
+.body {
+  margin-left: 50px;
+}
+
+.sidebar-logo {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.sidebar-content {
+  display: flex;
+	flex-direction: column;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 12px;
+
+  text-align: center;
+  color: #666666;
+}
+
+.body-content {
+  display: flex;
+	flex-direction: row;
+}
+
+.title {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 15px;
+  color: #666666;
+}
+
+.tab {
+  color: #666666;
+  margin-top: 30px;
+}
+
+.tab h5{
+  padding: 10px;
+}
+
+.tab-head {
+  display: flex;
+	padding: 10px;
+  width: auto;
+  flex-direction: row;
+}
+
+.tab-body {
+  display: flex;
+	flex-direction: row;
+  margin-top: 10px;
+  width: auto;
+  height: 50px;
+  padding: 10px;
+
+  background: #FFFFFF;
+  border: 1px solid rgba(102, 102, 102, 0.1);
+  box-sizing: border-box;
+  box-shadow: -12px -12px 17px rgba(255, 255, 255, 0.2), 10px -6px 17px rgba(166, 180, 200, 0.20);
+  border-radius: 12px;
+}
+
+.search {
+  width: 305px;
+  height: 25px;
+  color: #666666;
+  margin-top: 20px;
+  padding: 6px;
+  display: flex;
+  align-items: center;
+  background: rgba(102, 102, 102, 0.06);
+  border-radius: 13.5px;
+}
+
+.search p{
+  margin-left: 5px;
+  margin-bottom: 0px;
+}
+
+.pagin{
+  display: flex;
+  flex-direction: row;
+  margin-top: 70px;
+}
