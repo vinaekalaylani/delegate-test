@@ -28,7 +28,7 @@ export default function sidebar() {
       <Link href="/">
         <div className="btn_sidebar">
           <div style={{marginRight: "30px"}}>
-            <Image src="/frame.png" height="25" width="30" alt="logo"/>
+            <Image src="/Frame.png" height="25" width="30" alt="logo"/>
           </div>
           <p className="m-0">OVERVIEW</p>
         </div>
