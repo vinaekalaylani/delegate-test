@@ -17,9 +17,19 @@ export default function sidebar() {
   }
 
   return (
-    <div className="col-2 sidebar">
+    <div className="col-md-3 sidebar d-none d-lg-block">
       <div className="sidebar-logo">
-        <Image src="/logo.png" height="80" width="80" alt="logo"/>
+        <div className="logo-frame">
+          <div className="logo-lg d-flex justify-content-center align-items-center rounded-circle">
+            <h3 className="logo-ko mt-1">KO</h3>
+          </div>
+          <div className="logo-md d-flex justify-content-center align-items-center rounded-circle">
+            <div className="logo-sm rounded-circle d-flex justify-content-center align-items-center">
+              <Image src="/bel.png" height="16" width="14" alt="bel"/>
+            </div>
+            <div className="logo-red rounded-circle"></div>
+          </div>
+        </div>
       </div>
       <div className="sidebar-content">
         <h6>KINKY OSTENDORF</h6>
@@ -27,34 +37,34 @@ export default function sidebar() {
       </div>
       <Link href="/">
         <div className="btn_sidebar">
-          <div style={{marginRight: "30px"}}>
-            <Image src="/Frame.png" height="25" width="30" alt="logo"/>
+          <div>
+            <Image src="/Frame.png" height="23" width="30" alt="logo"/>
           </div>
-          <p className="m-0">OVERVIEW</p>
+          <p className="m-0 mx-4">OVERVIEW</p>
         </div>
       </Link>
       <Link href="/">
         <div className="btn_sidebar">
-          <div style={{marginRight: "30px"}}>
+          <div>
             <Image src="/business.png" height="25" width="30" alt="logo"/>
           </div>
-          <p className="m-0">BUSINESS</p>
+          <p className="m-0 mx-4">BUSINESS</p>
         </div>
       </Link>
       <Link href="/">
         <div className="btn_sidebar">
-          <div style={{marginRight: "30px"}}>
+          <div>
             <Image src="/inbox.png" height="25" width="30" alt="logo"/>
           </div>
-          <p className="m-0">INBOX</p>
+          <p className="m-0 mx-4">INBOX</p>
         </div>
       </Link>
       <Link href="/">
         <div className="btn_sidebar">
-          <div style={{marginRight: "30px"}}>
+          <div>
             <Image src="/collaborators.png" height="25" width="30" alt="logo"/>
           </div>
-          <p className="m-0">COLLABORATORS</p>
+          <p className="m-0 mx-4">COLLABORATORS</p>
         </div>
       </Link>
       <Accordion defaultActiveKey="0">
@@ -88,18 +98,18 @@ export default function sidebar() {
       </Accordion>
       <Link href="/">
         <div className="btn_sidebar">
-          <div style={{marginRight: "30px"}}>
+          <div>
             <Image src="/billing.png" height="25" width="30" alt="logo"/>
           </div>
-          <p className="m-0">BILLING</p>
+          <p className="m-0 mx-4">BILLING</p>
         </div>
       </Link>
       <Link href="/">
         <div className="btn_sidebar">
-          <div style={{marginRight: "30px"}}>
+          <div>
             <Image src="/support.png" height="25" width="30" alt="logo"/>
           </div>
-          <p className="m-0">SUPPORT</p>
+          <p className="m-0 mx-4">SUPPORT</p>
         </div>
       </Link>
     </div>

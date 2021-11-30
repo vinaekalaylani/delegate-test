@@ -8,16 +8,22 @@ import Modal from 'react-bootstrap/Modal'
 
 export default function Home({ dataUser, page }) {
   const [ inputSearch, setInputSearch ] = useState("")
-  const [ show, setShow ] = useState(false)
   const { data } = dataUser
+  const [ users, setUsers ] = useState(data)
+  const [ show, setShow ] = useState(false)
   const [ userId, setUserId ] = useState({
     "first_name": "",
     "last_name": "",
     "avatar": ""
   })
 
+  const date = `${new Date().toLocaleDateString('id-ID')} ${new Date().toLocaleTimeString('id-ID', { hour: '2-digit', minute: '2-digit' })}`
+
   const handleInput = (event) => {
     setInputSearch(event.target.value)
+    let search = event.target.value
+    let result = users.filter((el) => el.first_name.toLowerCase().includes(search.toLowerCase()))
+    search ? setUsers(result) : setUsers(data)
   }
 
   const handleShow = (data) => {
@@ -42,9 +48,9 @@ export default function Home({ dataUser, page }) {
   }
 
   return (
-    <div className="frame">
+    <div className="frame container" style={{marginTop: "100px"}}>
       <Sidebar/>
-      <div className="col-9 body">
+      <div className="col-md-9 col-12 body">
         <div className="body-content">
           <div className="col-1">
             <Image src="/Vector.png" height="60" width="60" alt="vector"/>
@@ -63,17 +69,20 @@ export default function Home({ dataUser, page }) {
         <div className="tab">
           <h5>INTERESTED USERS</h5>
           <div className="tab-head">
-            <div className="col-3"><h6>ID</h6></div>
-            <div className="col-3"><h6>EMAIL</h6></div>
-            <div><h6>NAME</h6></div>
+            <div className="col-md-2 col-2"><h6>ID</h6></div>
+            <div className="col-md-4 col-4 ml-md-0 ml-2"><h6>EMAIL</h6></div>
+            <div className="col-md-3 col-3 ml-md-0 ml-3"><h6>NAME</h6></div>
+            <div className="col-md-3 col-3 ml-md-0 ml-3"><h6>DATE</h6></div>
           </div>
           {
-            data.map((user) => {
+            users.sort((a, b) => (a.id > b.id ? -1 : 1)).map((user) => {
+              user.date = date
               return (
                 <div className="tab-body" key={user.id} onClick={() => handleShow(user)}>
-                  <p className="col-3">{user.id}</p>
-                  <p className="col-3">{user.email}</p>
-                  <p>{user.first_name} {user.last_name}</p>
+                  <p className="col-md-2 col-2">{user.id}</p>
+                  <p className="col-md-4 col-7 ml-md-0 ml-2">{user.email}</p>
+                  <p className="col-md-3 col-3 ml-md-0 ml-3">{user.first_name} {user.last_name}</p>
+                  <p className="col-md-3 col-3 ml-md-0 ml-3">{user.date}</p>
                 </div>
               )
             })
@@ -119,7 +128,6 @@ export default function Home({ dataUser, page }) {
 export async function getServerSideProps({ query: { page = 1 }}) {
 	const res = await fetch(`https://reqres.in/api/users?page=${page}`)
 	const dataUser = await res.json()
-	
 	return {
 		props: {
 			dataUser,

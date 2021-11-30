@@ -16,7 +16,7 @@ a {
 }
 
 .sidebar {
-  padding: 20px;
+  /* padding: 20px; */
   height: 760px;
   display: flex;
 	flex-direction: column;
@@ -52,13 +52,8 @@ a {
 }
 
 .frame {
-  margin: 100px;
   display: flex;
 	flex-direction: row;
-}
-
-.body {
-  margin-left: 50px;
 }
 
 .sidebar-logo {
@@ -144,4 +139,73 @@ a {
   display: flex;
   flex-direction: row;
   margin-top: 70px;
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .body {
+    margin-left: 50px;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .body {
+    margin-left: 50px;
+  }
+}
+
+.logo-frame {
+  display: flex; 
+  align-items: center;
+  position: relative;
+}
+
+.logo-lg {
+  height: 73px;
+  width: 73px; 
+  position: relative; 
+  margin-left: 25px; 
+  border: 2px solid #7DB7B4;
+}
+
+.logo-ko {
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 25px;
+  text-align: center;
+  color: #666666;
+}
+
+.logo-md {
+  /* background-color: #7DB7B4; */
+  background-image: linear-gradient(48deg, transparent 64%, #7DB7B4 36%);
+  height: 33px;
+  width: 33px;
+  position: absolute;
+  left: 15px;
+  top: 45px;
+  /* border: 2px solid; */
+  /* border-top-color:#7DB7B4;
+  border-left-color: transparent;
+  border-right-color: #7DB7B4;
+  border-bottom-color: transparent; */
+}
+
+.logo-sm {
+  background-color: #7DB7B4;
+  height: 28px;
+  width: 28px;
+  position: absolute;
+  border: 2px solid #FFFFFF;
+  top: 2px;
+}
+
+.logo-red {
+  background-color: #D3228C;
+  height: 7px;
+  width: 7px;
+  position: absolute;
+  left: 4px;
+  top: 3px;
 }
