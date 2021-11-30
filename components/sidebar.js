@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
+import BtnSidebar from './btnSidebar'
 import Accordion from 'react-bootstrap/Accordion'
 import { useAccordionButton } from 'react-bootstrap/AccordionButton'; 
 
@@ -35,38 +36,10 @@ export default function sidebar() {
         <h6>KINKY OSTENDORF</h6>
         <p>kinkysfruitlab@outlook.com</p>
       </div>
-      <Link href="/">
-        <div className="btn_sidebar">
-          <div>
-            <Image src="/Frame.png" height="23" width="30" alt="logo"/>
-          </div>
-          <p className="m-0 mx-4">OVERVIEW</p>
-        </div>
-      </Link>
-      <Link href="/">
-        <div className="btn_sidebar">
-          <div>
-            <Image src="/business.png" height="25" width="30" alt="logo"/>
-          </div>
-          <p className="m-0 mx-4">BUSINESS</p>
-        </div>
-      </Link>
-      <Link href="/">
-        <div className="btn_sidebar">
-          <div>
-            <Image src="/inbox.png" height="25" width="30" alt="logo"/>
-          </div>
-          <p className="m-0 mx-4">INBOX</p>
-        </div>
-      </Link>
-      <Link href="/">
-        <div className="btn_sidebar">
-          <div>
-            <Image src="/collaborators.png" height="25" width="30" alt="logo"/>
-          </div>
-          <p className="m-0 mx-4">COLLABORATORS</p>
-        </div>
-      </Link>
+      <BtnSidebar icon={"/Frame.png"} title={"OVERVIEW"}/>
+      <BtnSidebar icon={"/business.png"} title={"BUSINESS"}/>
+      <BtnSidebar icon={"/inbox.png"} title={"INBOX"}/>
+      <BtnSidebar icon={"/collaborators.png"} title={"COLLABORATORS"}/>
       <Accordion defaultActiveKey="0">
           <CustomToggle eventKey="0">
             <div className="d-flex align-items-center row">
@@ -96,22 +69,8 @@ export default function sidebar() {
             </div>
           </Accordion.Collapse>
       </Accordion>
-      <Link href="/">
-        <div className="btn_sidebar">
-          <div>
-            <Image src="/billing.png" height="25" width="30" alt="logo"/>
-          </div>
-          <p className="m-0 mx-4">BILLING</p>
-        </div>
-      </Link>
-      <Link href="/">
-        <div className="btn_sidebar">
-          <div>
-            <Image src="/support.png" height="25" width="30" alt="logo"/>
-          </div>
-          <p className="m-0 mx-4">SUPPORT</p>
-        </div>
-      </Link>
+      <BtnSidebar icon={"/billing.png"} title={"BILLING"}/>
+      <BtnSidebar icon={"/support.png"} title={"SUPPORT"}/>
     </div>
   )
 }

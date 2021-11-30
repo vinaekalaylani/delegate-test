@@ -16,7 +16,6 @@ a {
 }
 
 .sidebar {
-  /* padding: 20px; */
   height: 760px;
   display: flex;
 	flex-direction: column;
@@ -34,7 +33,6 @@ a {
   margin-top: 10px;
   margin-left: 20px;
   margin-right: 20px;
-
   border-radius: 10px;
   text-align: center;
   color: #666666;
@@ -46,7 +44,7 @@ a {
 
 .sub-link {
   font-weight: 500;
-  font-size: 8px;
+  font-size: 10px;
   line-height: 8px;
   color: #666666;
 }
@@ -70,7 +68,6 @@ a {
   font-weight: 500;
   font-size: 12px;
   line-height: 12px;
-
   text-align: center;
   color: #666666;
 }
@@ -110,7 +107,6 @@ a {
   width: auto;
   height: 50px;
   padding: 10px;
-
   background: #FFFFFF;
   border: 1px solid rgba(102, 102, 102, 0.1);
   box-sizing: border-box;
@@ -178,18 +174,12 @@ a {
 }
 
 .logo-md {
-  /* background-color: #7DB7B4; */
   background-image: linear-gradient(48deg, transparent 64%, #7DB7B4 36%);
   height: 33px;
   width: 33px;
   position: absolute;
   left: 15px;
   top: 45px;
-  /* border: 2px solid; */
-  /* border-top-color:#7DB7B4;
-  border-left-color: transparent;
-  border-right-color: #7DB7B4;
-  border-bottom-color: transparent; */
 }
 
 .logo-sm {
@@ -203,9 +193,9 @@ a {
 
 .logo-red {
   background-color: #D3228C;
-  height: 7px;
-  width: 7px;
+  height: 8px;
+  width: 8px;
   position: absolute;
   left: 4px;
-  top: 3px;
+  top: 4px;
 }
