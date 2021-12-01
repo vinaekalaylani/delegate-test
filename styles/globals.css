@@ -95,7 +95,6 @@ a {
 .tab-head {
   display: flex;
 	padding: 10px;
-  width: auto;
   flex-direction: row;
 }
 
@@ -103,7 +102,6 @@ a {
   display: flex;
 	flex-direction: row;
   margin-top: 10px;
-  width: auto;
   height: 50px;
   padding: 10px;
   background: #FFFFFF;

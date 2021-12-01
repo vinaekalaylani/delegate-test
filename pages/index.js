@@ -69,20 +69,20 @@ export default function Home({ dataUser, page }) {
         <div className="tab">
           <h5>INTERESTED USERS</h5>
           <div className="tab-head">
-            <div className="col-md-2 col-2"><h6>ID</h6></div>
-            <div className="col-md-4 col-4 ml-md-0 ml-2"><h6>EMAIL</h6></div>
-            <div className="col-md-3 col-3 ml-md-0 ml-3"><h6>NAME</h6></div>
-            <div className="col-md-3 col-3 ml-md-0 ml-3"><h6>DATE</h6></div>
+            <div className="col-md-1 col-1 ms-md-1 ms-2"><h6>ID</h6></div>
+            <div className="col-md-4 col-4 ms-md-0 ms-2"><h6>EMAIL</h6></div>
+            <div className="col-md-3 col-3 ms-md-0 ms-2"><h6>NAME</h6></div>
+            <div className="col-md-3 col-3 ms-md-0 ms-2"><h6>DATE</h6></div>
           </div>
           {
             users.sort((a, b) => (a.id > b.id ? -1 : 1)).map((user) => {
               user.date = date
               return (
                 <div className="tab-body" key={user.id} onClick={() => handleShow(user)}>
-                  <p className="col-md-2 col-2">{user.id}</p>
-                  <p className="col-md-4 col-7 ml-md-0 ml-2">{user.email}</p>
-                  <p className="col-md-3 col-3 ml-md-0 ml-3">{user.first_name} {user.last_name}</p>
-                  <p className="col-md-3 col-3 ml-md-0 ml-3">{user.date}</p>
+                  <p className="col-md-1 col-1 ms-md-1 ms-2">{user.id}</p>
+                  <p className="col-md-4 col-4 ms-md-0 ms-2">{user.email}</p>
+                  <p className="col-md-3 col-3 ms-md-0 ms-2">{user.first_name} {user.last_name}</p>
+                  <p className="col-md-3 col-3 ms-md-0 ms-2">{user.date}</p>
                 </div>
               )
             })
