@@ -42,18 +42,18 @@ export default function sidebar() {
       <BtnSidebar icon={"/collaborators.png"} title={"COLLABORATORS"}/>
       <Accordion defaultActiveKey="0">
           <CustomToggle eventKey="0">
-            <div className="d-flex align-items-center row">
-              <div className="col-3 p-0 mx-2">
+            <div className="d-flex align-items-center row" style={{marginLeft: "1px"}}>
+              <div className="col-4 p-0 bg-white d-flex align-items-center justify-content-center p-0 mx-1" style={{ borderRadius: "10px", height: "39px", width: "55px"}}>
                 <Image src="/performance.png" height="25" width="30" alt="logo"/>
               </div>
-              <div className="col-7 mx-1">
+              <div className="col-7" style={{marginLeft: "9px"}}>
                 <p className="m-0">PERFORMANCE</p>
               </div>
             </div>
           </CustomToggle>
           <Accordion.Collapse eventKey="0">
             <div className="row">
-              <div className="col-8" style={{marginLeft: "100px"}}>
+              <div className="col-8" style={{marginLeft: "107px"}}>
                 <ul className="p-0 m-0" style={{listStyleType: "none"}}>
                   <Link href="/">
                     <li className="sub-link mt-3">SUMMARY</li>

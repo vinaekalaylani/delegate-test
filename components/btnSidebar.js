@@ -6,7 +6,7 @@ export default function BtnSidebar({icon, title}) {
   return (
     <Link href="/">
       <div className="btn_sidebar">
-        <div>
+        <div className="bg-white d-flex align-items-center justify-content-center p-0 mx-1" style={{ borderRadius: "10px", height: "39px", width: "55px"}}>
         <Image src={icon} height="25" width="30" alt="logo"/>
         </div>
         <p className="m-0 mx-4">{title}</p>
