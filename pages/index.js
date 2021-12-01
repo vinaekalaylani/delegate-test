@@ -42,8 +42,8 @@ export default function Home({ dataUser, page }) {
         style={{ 
           color: page === i ? "#FFFFFF" : "#666666", backgroundColor: page === i && "#7DB7B4",
           fontSize: "11px", height: "21px", width: "21px"
-        }}>
-      {i}</h6>
+        }}>{i}
+      </h6>
     )
   }
 

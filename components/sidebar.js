@@ -3,7 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import BtnSidebar from './btnSidebar'
 import Accordion from 'react-bootstrap/Accordion'
-import { useAccordionButton } from 'react-bootstrap/AccordionButton'; 
+import { useAccordionButton } from 'react-bootstrap/AccordionButton'
 
 export default function sidebar() {
   
@@ -14,7 +14,7 @@ export default function sidebar() {
       <div className="btn_sidebar" onClick={decoratedOnClick} style={{background: "rgba(125, 183, 180, 0.15)"}}>
         {children}
       </div>
-    );
+    )
   }
 
   return (
